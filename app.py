@@ -41,7 +41,7 @@ def recommend_songs(user_mood, n=5):
 
 # Streamlit App
 st.set_page_config(page_title="Mood Music Recommender", page_icon="🎧")
-st.title("🎧 Mood-Based Music Recommender")
+st.title("Mood-Based Music Recommender")
 st.write("Describe how you're feeling, and get song recommendations based on your mood!")
 
 # User input
@@ -53,6 +53,6 @@ if user_input:
 
     if st.button("Recommend Songs"):
         songs = recommend_songs(mood)
-        st.subheader("🎵 Recommended Songs:")
+        st.subheader("Recommended Songs:")
         for idx, row in songs.iterrows():
             st.markdown(f"**{row['track_name']}** — *{row['artists']}* ({row['track_genre']})")
